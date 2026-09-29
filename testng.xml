@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    A single <test> (or multiple <test> blocks) here all execute inside ONE
+    TestNG suite, which is exactly what gives us login-once/shared-session:
+    @BeforeSuite / @AfterSuite in BaseTest fire once total for everything
+    listed below, no matter how many RFC test classes are added.
+
+    Keep parallel="false" - all RFC tests intentionally share one browser
+    and one authenticated session. Running in parallel would require
+    separate browser sessions per thread, which this framework does not do.
+-->
+<suite name="RFC Test Suite" parallel="false" verbose="1">
+
+    <listeners>
+        <listener class-name="com.vro.rfc.listeners.TestListener"/>
+    </listeners>
+
+    <test name="RFC Regression">
+        <classes>
+            <class name="com.vro.rfc.tests.rfc.RFC001_Test"/>
+            <class name="com.vro.rfc.tests.rfc.PortfolioPlannerTest"/>
+            <!-- Add new RFC test classes here, e.g.: -->
+            <!-- <class name="com.vro.rfc.tests.rfc.RFC002_Test"/> -->
+        </classes>
+    </test>
+
+</suite>

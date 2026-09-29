@@ -1,0 +1,16 @@
+# Copy of the framework's default test configuration (src/test/resources/config.properties).
+# No real secrets belong here - credentials are always resolved from environment
+# variables at runtime (see username / password below).
+
+base.url=https://qa.valueresearch.in/login
+
+browser=chrome
+# overridden per-run with -Dheadless=true|false
+headless=false
+
+# Resolved from environment variables at runtime - never hardcode real values here.
+username=${ENV_USERNAME}
+password=${ENV_PASSWORD}
+
+explicit.wait=15
+page.load.timeout=30
