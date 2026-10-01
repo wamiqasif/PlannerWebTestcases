@@ -150,7 +150,7 @@ public class PortfolioPlannerPage extends BasePage {
      * "Investor Selected: <name>" line, which is present and in the same position
      * for every goal variant.
      */
-    @FindBy(xpath = "//div[contains(normalize-space(),'Investor Selected:')]/following-sibling::h1[1]")
+    @FindBy(xpath = "//h1[normalize-space()='Your investment plan']")
     private WebElement investmentPlanHeading;
 
     @FindBy(xpath = "//button[normalize-space()='Breakdown']")
@@ -191,6 +191,8 @@ public class PortfolioPlannerPage extends BasePage {
 
     @FindBy(xpath = "//button[normalize-space()='+ Add fund']")
     private WebElement addFundButton;
+    
+    @FindBy(xpath="(//input[@class='w-full rounded-[8px] py-s11 pr-s13 text-fs-14 focus:outline-none'])[1]") WebElement EditSIPAmount;
 
     @FindBy(xpath = "//button[@data-slot='button' and normalize-space()='Exit']")
     private WebElement exitEditPlanButton;
@@ -372,6 +374,8 @@ public class PortfolioPlannerPage extends BasePage {
         field.clear();
         field.sendKeys(period);
     }
+    
+    
 
     public void selectMonthsUnit() {
         wait.waitForClickable(monthsUnitTab).click();
@@ -388,6 +392,12 @@ public class PortfolioPlannerPage extends BasePage {
     public String getShowInvestmentPlanButtonText() {
         return wait.waitForVisible(showInvestmentPlanButton).getText();
     }
+
+    public void enterEditSIPAmount(String amount) {
+        WebElement field = wait.waitForVisible(EditSIPAmount);
+        field.clear();
+        field.sendKeys(amount);}
+    
 
     // --- "Invest for monthly income" (income details) step ---
 

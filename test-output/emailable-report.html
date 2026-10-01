@@ -8,59 +8,68 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">35,841</td><td></td><td></td></tr>
+<tr><th colspan="8">RFC Test Suite</th></tr>
+<tr><td><a href="#t0">RFC Regression</a></td><td class="num">11</td><td class="num">0</td><td class="num">0</td><td class="num attn">8</td><td class="num">383,841</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.vro.rfc.tests.rfc.PortfolioPlannerTest</td><td><a href="#m0">verifyInvestNowNavigatesToCart</a></td><td rowspan="1">1790676706846</td><td rowspan="1">28558</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">RFC Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">RFC Regression &#8212; failed</th></tr><tr class="failedeven"><td rowspan="7">com.vro.rfc.tests.rfc.PortfolioPlannerTest</td><td><a href="#m0">verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount</a></td><td rowspan="1">1790850465143</td><td rowspan="1">31164</td></tr><tr class="failedeven"><td><a href="#m1">verifyMonthlyIncomePlanGeneration_StartImmediately</a></td><td rowspan="1">1790850601820</td><td rowspan="1">15405</td></tr><tr class="failedeven"><td><a href="#m2">verifyMonthlyIncomePlanGeneration_StartIn1To5Years</a></td><td rowspan="1">1790850625797</td><td rowspan="1">25580</td></tr><tr class="failedeven"><td><a href="#m3">verifyMonthlyIncomePlanGeneration_StartIn1Year</a></td><td rowspan="1">1790850657051</td><td rowspan="1">26640</td></tr><tr class="failedeven"><td><a href="#m4">verifyShowInvestmentPlanButtonLabel_MonthlyIncome</a></td><td rowspan="1">1790850745011</td><td rowspan="1">9491</td></tr><tr class="failedeven"><td><a href="#m5">verifyShowInvestmentPlanButtonLabel_TaxSaving</a></td><td rowspan="1">1790850759610</td><td rowspan="1">11062</td></tr><tr class="failedeven"><td><a href="#m6">verifyTaxSavingPlanGeneration</a></td><td rowspan="1">1790850793095</td><td rowspan="1">12704</td></tr><tr class="failedodd"><td rowspan="1">com.vro.rfc.tests.rfc.RFC001_Test</td><td><a href="#m7">verifyRFC001PortfolioNavigation</a></td><td rowspan="1">1790850429670</td><td rowspan="1">6381</td></tr><tr><th colspan="4">RFC Regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="11">com.vro.rfc.tests.rfc.PortfolioPlannerTest</td><td><a href="#m8">verifyEditInvestmentPlanButtonOpensEditScreen</a></td><td rowspan="1">1790850445351</td><td rowspan="1">14177</td></tr><tr class="passedeven"><td><a href="#m9">verifyHigherReturnsSipPlanGeneration</a></td><td rowspan="1">1790850501734</td><td rowspan="1">12455</td></tr><tr class="passedeven"><td><a href="#m10">verifyInvestForHigherReturnsCardOpensItsForm</a></td><td rowspan="1">1790850519807</td><td rowspan="1">8936</td></tr><tr class="passedeven"><td><a href="#m11">verifyInvestForMonthlyIncomeCardOpensItsForm</a></td><td rowspan="1">1790850533973</td><td rowspan="1">8451</td></tr><tr class="passedeven"><td><a href="#m12">verifyInvestNowNavigatesToCart</a></td><td rowspan="1">1790850550213</td><td rowspan="1">18177</td></tr><tr class="passedeven"><td><a href="#m13">verifyInvestToSaveTaxCardOpensItsForm</a></td><td rowspan="1">1790850573325</td><td rowspan="1">8985</td></tr><tr class="passedeven"><td><a href="#m14">verifyInvestmentTypePillsAreSwitchable_HigherReturns</a></td><td rowspan="1">1790850587695</td><td rowspan="1">8631</td></tr><tr class="passedeven"><td><a href="#m15">verifyReadMoreDisclaimerLinkIsClickable</a></td><td rowspan="1">1790850690140</td><td rowspan="1">12931</td></tr><tr class="passedeven"><td><a href="#m16">verifySelectInvestorNavigatesToAimScreenWithInvestorCarriedOver</a></td><td rowspan="1">1790850710027</td><td rowspan="1">8378</td></tr><tr class="passedeven"><td><a href="#m17">verifyShowInvestmentPlanButtonLabel_HigherReturns</a></td><td rowspan="1">1790850728770</td><td rowspan="1">10997</td></tr><tr class="passedeven"><td><a href="#m18">verifyTaxSavingLockInWarningIsDisplayed</a></td><td rowspan="1">1790850775967</td><td rowspan="1">9011</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyInvestNowNavigatesToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[contains(normalize-space(),&apos;Investor Selected:&apos;)]/following-sibling::h1[1]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+<h2>RFC Regression</h2><h3 id="m0">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.id: payment-link-button&apos; (tried for 15 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
-	at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilInvestmentPlanStepLoaded(PortfolioPlannerPage.java:455)
-	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.generateHigherReturnsPlan(PortfolioPlannerTest.java:678)
-	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyInvestNowNavigatesToCart(PortfolioPlannerTest.java:469)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at com.vro.rfc.utils.WaitUtils.waitForClickable(WaitUtils.java:48)
+	at com.vro.rfc.pages.PortfolioPlannerPage.clickPay(PortfolioPlannerPage.java:566)
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount(PortfolioPlannerTest.java:477)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(normalize-space(),&apos;Investor Selected:&apos;)]/following-sibling::h1[1]&quot;}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#payment\-link\-button&quot;}
   (Session info: chrome=152.0.7977.64)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.17.0-1032-oem&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [397ec812913c3d1f1552c105e99245d9, findElement {using=xpath, value=//div[contains(normalize-space(),&apos;Investor Selected:&apos;)]/following-sibling::h1[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:32819}, goog:processID: 206520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:32819/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 397ec812913c3d1f1552c105e99245d9
-	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=payment-link-button, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyMonthlyIncomePlanGeneration_StartImmediately</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h1[normalize-space()=&apos;Portfolio Planner&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
+	at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilLoaded(PortfolioPlannerPage.java:293)
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.selectInvestorAndProceed(PortfolioPlannerTest.java:623)
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.selectInvestorAndProceed(PortfolioPlannerTest.java:612)
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.goToMonthlyIncomeForm(PortfolioPlannerTest.java:654)
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyMonthlyIncomePlanGeneration_StartImmediately(PortfolioPlannerTest.java:344)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[normalize-space()=&apos;Portfolio Planner&apos;]&quot;}
+  (Session info: chrome=152.0.7977.64)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.17.0-1032-oem&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=//h1[normalize-space()=&apos;Portfolio Planner&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -79,7 +88,106 @@ Session ID: 397ec812913c3d1f1552c105e99245d9
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 32 more
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	... 34 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyMonthlyIncomePlanGeneration_StartIn1To5Years</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h1[normalize-space()=&apos;Your investment plan&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
+	at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilInvestmentPlanStepLoaded(PortfolioPlannerPage.java:465)
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyMonthlyIncomePlanGeneration_StartIn1To5Years(PortfolioPlannerTest.java:308)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[normalize-space()=&apos;Your investment plan&apos;]&quot;}
+  (Session info: chrome=152.0.7977.64)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.17.0-1032-oem&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=//h1[normalize-space()=&apos;Your investment plan&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyMonthlyIncomePlanGeneration_StartIn1Year</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h1[normalize-space()=&apos;Your investment plan&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
+	at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilInvestmentPlanStepLoaded(PortfolioPlannerPage.java:465)
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyMonthlyIncomePlanGeneration_StartIn1Year(PortfolioPlannerTest.java:328)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[normalize-space()=&apos;Your investment plan&apos;]&quot;}
+  (Session info: chrome=152.0.7977.64)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.17.0-1032-oem&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=//h1[normalize-space()=&apos;Your investment plan&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyShowInvestmentPlanButtonLabel_MonthlyIncome</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: PRD requires the CTA to read &apos;Show investment plan&apos; on ALL three planner-option screens expected [Show investment plan] but found [Get Investment Plan]
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyShowInvestmentPlanButtonLabel_MonthlyIncome(PortfolioPlannerTest.java:289)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyShowInvestmentPlanButtonLabel_TaxSaving</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: PRD requires the CTA to read &apos;Show investment plan&apos; on ALL three planner-option screens expected [Show investment plan] but found [Continue]
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyShowInvestmentPlanButtonLabel_TaxSaving(PortfolioPlannerTest.java:374)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyTaxSavingPlanGeneration</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: PRD requires &apos;Your tax-saving plan&apos; as the headline for this journey expected [Your tax-saving plan] but found [Your investment plan]
+	at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyTaxSavingPlanGeneration(PortfolioPlannerTest.java:415)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.vro.rfc.tests.rfc.RFC001_Test#verifyRFC001PortfolioNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected URL to contain &apos;portfolio&apos; after navigating from Dashboard expected [true] but found [false]
+	at com.vro.rfc.tests.rfc.RFC001_Test.verifyRFC001PortfolioNavigation(RFC001_Test.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyEditInvestmentPlanButtonOpensEditScreen</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyHigherReturnsSipPlanGeneration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyInvestForHigherReturnsCardOpensItsForm</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyInvestForMonthlyIncomeCardOpensItsForm</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyInvestNowNavigatesToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyInvestToSaveTaxCardOpensItsForm</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyInvestmentTypePillsAreSwitchable_HigherReturns</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyReadMoreDisclaimerLinkIsClickable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifySelectInvestorNavigatesToAimScreenWithInvestorCarriedOver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyShowInvestmentPlanButtonLabel_HigherReturns</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">com.vro.rfc.tests.rfc.PortfolioPlannerTest#verifyTaxSavingLockInWarningIsDisplayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

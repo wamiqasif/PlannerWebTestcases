@@ -1,41 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="19" passed="11" failed="8" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-29T15:41:39 IST" name="Default suite" finished-at="2026-09-29T15:42:15 IST" duration-ms="35841">
+  <suite started-at="2026-10-01T15:57:02 IST" name="RFC Test Suite" finished-at="2026-10-01T16:03:25 IST" duration-ms="383841">
     <groups>
     </groups>
-    <test started-at="2026-09-29T15:41:39 IST" name="Default test" finished-at="2026-09-29T15:42:15 IST" duration-ms="35841">
-      <class name="com.vro.rfc.tests.rfc.PortfolioPlannerTest">
-        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@5db6b9cd]" started-at="2026-09-29T15:41:19 IST" name="suiteSetup" finished-at="2026-09-29T15:41:39 IST" duration-ms="20178" status="PASS">
+    <test started-at="2026-10-01T15:57:02 IST" name="RFC Regression" finished-at="2026-10-01T16:03:25 IST" duration-ms="383841">
+      <class name="com.vro.rfc.tests.rfc.RFC001_Test">
+        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:com.vro.rfc.tests.rfc.RFC001_Test@34bde49d]" started-at="2026-10-01T15:56:48 IST" name="suiteSetup" finished-at="2026-10-01T15:57:02 IST" duration-ms="13516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method is-config="true" signature="loadTestData()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@5db6b9cd]" started-at="2026-09-29T15:41:39 IST" name="loadTestData" finished-at="2026-09-29T15:41:39 IST" duration-ms="78" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadTestData -->
-        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@5db6b9cd]" started-at="2026-09-29T15:41:39 IST" name="recoverToDashboard" finished-at="2026-09-29T15:41:44 IST" duration-ms="5002" status="PASS">
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.RFC001_Test@34bde49d]" started-at="2026-10-01T15:57:02 IST" name="recoverToDashboard" finished-at="2026-10-01T15:57:09 IST" duration-ms="7468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recoverToDashboard -->
-        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@5db6b9cd]" started-at="2026-09-29T15:41:44 IST" name="openPortfolioPlanner" finished-at="2026-09-29T15:41:46 IST" duration-ms="2179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openPortfolioPlanner -->
-        <test-method signature="verifyInvestNowNavigatesToCart()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@5db6b9cd]" started-at="2026-09-29T15:41:46 IST" name="verifyInvestNowNavigatesToCart" description="Investment plan screen: &#039;Invest Now&#039; starts the cart order journey (PRD: &#039;An active account initiates the cart order journey&#039;). Uses the transaction-capable test investor - the default investor has no active transaction account and never reaches Cart from here. Stops at the Cart screen - never proceeds to OTP/payment, which would submit a real transaction." finished-at="2026-09-29T15:42:15 IST" duration-ms="28558" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="verifyRFC001PortfolioNavigation()[pri:0, instance:com.vro.rfc.tests.rfc.RFC001_Test@34bde49d]" started-at="2026-10-01T15:57:09 IST" name="verifyRFC001PortfolioNavigation" description="Verify RFC001 - authenticated user can navigate from Dashboard to Portfolio" finished-at="2026-10-01T15:57:16 IST" duration-ms="6381" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[contains(normalize-space(),'Investor Selected:')]/following-sibling::h1[1]' (tried for 15 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected URL to contain 'portfolio' after navigating from Dashboard expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[contains(normalize-space(),'Investor Selected:')]/following-sibling::h1[1]' (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
-at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilInvestmentPlanStepLoaded(PortfolioPlannerPage.java:455)
-at com.vro.rfc.tests.rfc.PortfolioPlannerTest.generateHigherReturnsPlan(PortfolioPlannerTest.java:678)
-at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyInvestNowNavigatesToCart(PortfolioPlannerTest.java:469)
+              <![CDATA[java.lang.AssertionError: Expected URL to contain 'portfolio' after navigating from Dashboard expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.vro.rfc.tests.rfc.RFC001_Test.verifyRFC001PortfolioNavigation(RFC001_Test.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,16 +54,255 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(normalize-space(),'Investor Selected:')]/following-sibling::h1[1]"}
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRFC001PortfolioNavigation -->
+        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:com.vro.rfc.tests.rfc.RFC001_Test@34bde49d]" started-at="2026-10-01T16:03:26 IST" name="suiteTearDown" finished-at="2026-10-01T16:03:26 IST" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteTearDown -->
+      </class> <!-- com.vro.rfc.tests.rfc.RFC001_Test -->
+      <class name="com.vro.rfc.tests.rfc.PortfolioPlannerTest">
+        <test-method is-config="true" signature="loadTestData()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:57:16 IST" name="loadTestData" finished-at="2026-10-01T15:57:16 IST" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadTestData -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:57:16 IST" name="recoverToDashboard" finished-at="2026-10-01T15:57:23 IST" duration-ms="6853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:57:23 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:57:25 IST" duration-ms="2129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyEditInvestmentPlanButtonOpensEditScreen()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:57:25 IST" name="verifyEditInvestmentPlanButtonOpensEditScreen" description="Investment plan screen: &#039;Edit Investment Plan&#039; opens the Edit Investment Plan screen (PRD: &#039;Upon clicking on the Edit button, users can edit the investment details&#039;)" finished-at="2026-10-01T15:57:39 IST" duration-ms="14177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditInvestmentPlanButtonOpensEditScreen -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:57:39 IST" name="recoverToDashboard" finished-at="2026-10-01T15:57:44 IST" duration-ms="4595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:57:44 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:57:45 IST" duration-ms="1017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:57:45 IST" name="verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount" description="Investment plan screen: &#039;Edit Investment Plan&#039; opens the Edit Investment Plan screen (PRD: &#039;Upon clicking on the Edit button, users can edit the investment details&#039;)" finished-at="2026-10-01T15:58:16 IST" duration-ms="31164" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: payment-link-button' (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: payment-link-button' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.vro.rfc.utils.WaitUtils.waitForClickable(WaitUtils.java:48)
+at com.vro.rfc.pages.PortfolioPlannerPage.clickPay(PortfolioPlannerPage.java:566)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount(PortfolioPlannerTest.java:477)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#payment\-link\-button"}
   (Session info: chrome=152.0.7977.64)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1032-oem', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [397ec812913c3d1f1552c105e99245d9, findElement {using=xpath, value=//div[contains(normalize-space(),'Investor Selected:')]/following-sibling::h1[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:32819}, goog:processID: 206520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:32819/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 397ec812913c3d1f1552c105e99245d9
-at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=payment-link-button, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
+at jdk.internal.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:16 IST" name="recoverToDashboard" finished-at="2026-10-01T15:58:20 IST" duration-ms="4309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:20 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:58:21 IST" duration-ms="1001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyHigherReturnsSipPlanGeneration()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:21 IST" name="verifyHigherReturnsSipPlanGeneration" description="Higher returns form (SIP only): entering a SIP amount/period and submitting generates the investment plan with the correct headline (PRD 11.3.1, 11.2.1&#039;s fallback-headline note)" finished-at="2026-10-01T15:58:34 IST" duration-ms="12455" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHigherReturnsSipPlanGeneration -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:34 IST" name="recoverToDashboard" finished-at="2026-10-01T15:58:38 IST" duration-ms="4430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:38 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:58:39 IST" duration-ms="1186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyInvestForHigherReturnsCardOpensItsForm()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:39 IST" name="verifyInvestForHigherReturnsCardOpensItsForm" description="Aim screen: &#039;Invest for higher returns&#039; opens its SIP/lumpsum details form (PRD 11.2.1)" finished-at="2026-10-01T15:58:48 IST" duration-ms="8936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvestForHigherReturnsCardOpensItsForm -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:48 IST" name="recoverToDashboard" finished-at="2026-10-01T15:58:52 IST" duration-ms="4241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:52 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:58:53 IST" duration-ms="988" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyInvestForMonthlyIncomeCardOpensItsForm()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:58:53 IST" name="verifyInvestForMonthlyIncomeCardOpensItsForm" description="Aim screen: &#039;Invest for monthly income&#039; opens its income details form (PRD 11.2.9)" finished-at="2026-10-01T15:59:02 IST" duration-ms="8451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvestForMonthlyIncomeCardOpensItsForm -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:02 IST" name="recoverToDashboard" finished-at="2026-10-01T15:59:09 IST" duration-ms="6815" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:09 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:59:10 IST" duration-ms="971" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyInvestNowNavigatesToCart()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:10 IST" name="verifyInvestNowNavigatesToCart" description="Investment plan screen: &#039;Invest Now&#039; starts the cart order journey (PRD: &#039;An active account initiates the cart order journey&#039;). Uses the transaction-capable test investor - the default investor has no active transaction account and never reaches Cart from here. Stops at the Cart screen - never proceeds to OTP/payment, which would submit a real transaction." finished-at="2026-10-01T15:59:28 IST" duration-ms="18177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvestNowNavigatesToCart -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:28 IST" name="recoverToDashboard" finished-at="2026-10-01T15:59:32 IST" duration-ms="3967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:32 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:59:33 IST" duration-ms="966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyInvestToSaveTaxCardOpensItsForm()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:33 IST" name="verifyInvestToSaveTaxCardOpensItsForm" description="Aim screen: &#039;Invest to save tax&#039; opens its tax-saving details form (PRD 11.2.8)" finished-at="2026-10-01T15:59:42 IST" duration-ms="8985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvestToSaveTaxCardOpensItsForm -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:42 IST" name="recoverToDashboard" finished-at="2026-10-01T15:59:46 IST" duration-ms="4420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:46 IST" name="openPortfolioPlanner" finished-at="2026-10-01T15:59:47 IST" duration-ms="963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyInvestmentTypePillsAreSwitchable_HigherReturns()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:47 IST" name="verifyInvestmentTypePillsAreSwitchable_HigherReturns" description="Higher returns form: SIP/One-time/Both investment-type pills are each clickable (PRD tracking: &#039;SIP, One-time, both pills at portfolio planner input screen&#039;)" finished-at="2026-10-01T15:59:56 IST" duration-ms="8631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvestmentTypePillsAreSwitchable_HigherReturns -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T15:59:56 IST" name="recoverToDashboard" finished-at="2026-10-01T16:00:00 IST" duration-ms="4456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:00 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:00:01 IST" duration-ms="1036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyMonthlyIncomePlanGeneration_StartImmediately()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:01 IST" name="verifyMonthlyIncomePlanGeneration_StartImmediately" description="Monthly income form: &#039;Immediately&#039; timeframe generates the plan (PRD 11.3.5)" finished-at="2026-10-01T16:00:17 IST" duration-ms="15405" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Portfolio Planner']' (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Portfolio Planner']' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
+at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilLoaded(PortfolioPlannerPage.java:293)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.selectInvestorAndProceed(PortfolioPlannerTest.java:623)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.selectInvestorAndProceed(PortfolioPlannerTest.java:612)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.goToMonthlyIncomeForm(PortfolioPlannerTest.java:654)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyMonthlyIncomePlanGeneration_StartImmediately(PortfolioPlannerTest.java:344)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[normalize-space()='Portfolio Planner']"}
+  (Session info: chrome=152.0.7977.64)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1032-oem', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=//h1[normalize-space()='Portfolio Planner'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
+at jdk.internal.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -95,18 +324,399 @@ at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedCo
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 32 more
+... 34 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyInvestNowNavigatesToCart -->
-        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@5db6b9cd]" started-at="2026-09-29T15:42:15 IST" name="suiteTearDown" finished-at="2026-09-29T15:42:15 IST" duration-ms="80" status="PASS">
+        </test-method> <!-- verifyMonthlyIncomePlanGeneration_StartImmediately -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:17 IST" name="recoverToDashboard" finished-at="2026-10-01T16:00:24 IST" duration-ms="7442" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- suiteTearDown -->
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:24 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:00:25 IST" duration-ms="1062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyMonthlyIncomePlanGeneration_StartIn1To5Years()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:25 IST" name="verifyMonthlyIncomePlanGeneration_StartIn1To5Years" description="Monthly income form: &#039;In the next 1-5 years&#039; timeframe generates the plan (PRD 11.3.5)" finished-at="2026-10-01T16:00:51 IST" duration-ms="25580" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Your investment plan']' (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Your investment plan']' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
+at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilInvestmentPlanStepLoaded(PortfolioPlannerPage.java:465)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyMonthlyIncomePlanGeneration_StartIn1To5Years(PortfolioPlannerTest.java:308)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[normalize-space()='Your investment plan']"}
+  (Session info: chrome=152.0.7977.64)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1032-oem', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=//h1[normalize-space()='Your investment plan'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
+at jdk.internal.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMonthlyIncomePlanGeneration_StartIn1To5Years -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:51 IST" name="recoverToDashboard" finished-at="2026-10-01T16:00:56 IST" duration-ms="4635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:56 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:00:57 IST" duration-ms="907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyMonthlyIncomePlanGeneration_StartIn1Year()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:00:57 IST" name="verifyMonthlyIncomePlanGeneration_StartIn1Year" description="Monthly income form: &#039;In the next 1 year&#039; timeframe generates the plan with the correct headline (PRD 11.3.5, and the &#039;Your regular income plan&#039; note under 11.2.9)" finished-at="2026-10-01T16:01:23 IST" duration-ms="26640" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Your investment plan']' (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[normalize-space()='Your investment plan']' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.vro.rfc.utils.WaitUtils.waitForVisible(WaitUtils.java:40)
+at com.vro.rfc.pages.PortfolioPlannerPage.waitUntilInvestmentPlanStepLoaded(PortfolioPlannerPage.java:465)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyMonthlyIncomePlanGeneration_StartIn1Year(PortfolioPlannerTest.java:328)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[normalize-space()='Your investment plan']"}
+  (Session info: chrome=152.0.7977.64)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1032-oem', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2825585b3f5550934a588dad733a94f9, findElement {value=//h1[normalize-space()='Your investment plan'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.64, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41259}, goog:processID: 146300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41259/devtoo..., se:cdpVersion: 152.0.7977.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2825585b3f5550934a588dad733a94f9
+at jdk.internal.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMonthlyIncomePlanGeneration_StartIn1Year -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:01:23 IST" name="recoverToDashboard" finished-at="2026-10-01T16:01:29 IST" duration-ms="5344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:01:29 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:01:30 IST" duration-ms="984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyReadMoreDisclaimerLinkIsClickable()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:01:30 IST" name="verifyReadMoreDisclaimerLinkIsClickable" description="Investment plan screen: &#039;Read more&#039; on the disclaimer is clickable (PRD 11.10: &#039;Read more&#039; expands the full disclaimer). Only the click itself is verified - there&#039;s no locator yet for the expanded disclaimer panel to assert its content." finished-at="2026-10-01T16:01:43 IST" duration-ms="12931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyReadMoreDisclaimerLinkIsClickable -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:01:43 IST" name="recoverToDashboard" finished-at="2026-10-01T16:01:48 IST" duration-ms="5909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:01:48 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:01:50 IST" duration-ms="1046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifySelectInvestorNavigatesToAimScreenWithInvestorCarriedOver()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:01:50 IST" name="verifySelectInvestorNavigatesToAimScreenWithInvestorCarriedOver" description="Select Investor: selecting an investor and clicking Next opens the aim-selection step with that investor carried over (PRD: Select Investor -&gt; Investment objective)" finished-at="2026-10-01T16:01:58 IST" duration-ms="8378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySelectInvestorNavigatesToAimScreenWithInvestorCarriedOver -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:01:58 IST" name="recoverToDashboard" finished-at="2026-10-01T16:02:07 IST" duration-ms="9432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:07 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:02:08 IST" duration-ms="932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyShowInvestmentPlanButtonLabel_HigherReturns()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:08 IST" name="verifyShowInvestmentPlanButtonLabel_HigherReturns" description="Higher returns form: CTA reads &#039;Show investment plan&#039;, per PRD (&#039;replaces Calculate&#039;)" finished-at="2026-10-01T16:02:19 IST" duration-ms="10997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowInvestmentPlanButtonLabel_HigherReturns -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:19 IST" name="recoverToDashboard" finished-at="2026-10-01T16:02:24 IST" duration-ms="4338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:24 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:02:25 IST" duration-ms="904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyShowInvestmentPlanButtonLabel_MonthlyIncome()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:25 IST" name="verifyShowInvestmentPlanButtonLabel_MonthlyIncome" description="Monthly income form: CTA text vs PRD&#039;s &#039;Show investment plan&#039; requirement. KNOWN MISMATCH: the real button is labelled &#039;Get Investment Plan&#039;, so this test is expected to fail until the PRD and the shipped UI are reconciled - kept as-is intentionally to surface the gap." finished-at="2026-10-01T16:02:34 IST" duration-ms="9491" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[PRD requires the CTA to read 'Show investment plan' on ALL three planner-option screens expected [Show investment plan] but found [Get Investment Plan]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: PRD requires the CTA to read 'Show investment plan' on ALL three planner-option screens expected [Show investment plan] but found [Get Investment Plan]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyShowInvestmentPlanButtonLabel_MonthlyIncome(PortfolioPlannerTest.java:289)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowInvestmentPlanButtonLabel_MonthlyIncome -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:34 IST" name="recoverToDashboard" finished-at="2026-10-01T16:02:38 IST" duration-ms="4048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:38 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:02:39 IST" duration-ms="963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyShowInvestmentPlanButtonLabel_TaxSaving()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:39 IST" name="verifyShowInvestmentPlanButtonLabel_TaxSaving" description="Tax-saving form: CTA text vs PRD&#039;s &#039;Show investment plan&#039; requirement. KNOWN MISMATCH: the real button is labelled &#039;Continue&#039;, so this test is expected to fail until the PRD and the shipped UI are reconciled - kept as-is intentionally to surface the gap." finished-at="2026-10-01T16:02:50 IST" duration-ms="11062" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[PRD requires the CTA to read 'Show investment plan' on ALL three planner-option screens expected [Show investment plan] but found [Continue]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: PRD requires the CTA to read 'Show investment plan' on ALL three planner-option screens expected [Show investment plan] but found [Continue]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyShowInvestmentPlanButtonLabel_TaxSaving(PortfolioPlannerTest.java:374)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowInvestmentPlanButtonLabel_TaxSaving -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:50 IST" name="recoverToDashboard" finished-at="2026-10-01T16:02:55 IST" duration-ms="4254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:55 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:02:55 IST" duration-ms="924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyTaxSavingLockInWarningIsDisplayed()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:02:55 IST" name="verifyTaxSavingLockInWarningIsDisplayed" description="Tax-saving form: lock-in warning banner is shown with the expected wording" finished-at="2026-10-01T16:03:04 IST" duration-ms="9011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTaxSavingLockInWarningIsDisplayed -->
+        <test-method is-config="true" signature="recoverToDashboard()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:03:04 IST" name="recoverToDashboard" finished-at="2026-10-01T16:03:12 IST" duration-ms="7185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoverToDashboard -->
+        <test-method is-config="true" signature="openPortfolioPlanner()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:03:12 IST" name="openPortfolioPlanner" finished-at="2026-10-01T16:03:13 IST" duration-ms="931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolioPlanner -->
+        <test-method signature="verifyTaxSavingPlanGeneration()[pri:0, instance:com.vro.rfc.tests.rfc.PortfolioPlannerTest@7857fe2]" started-at="2026-10-01T16:03:13 IST" name="verifyTaxSavingPlanGeneration" description="Tax-saving form: entering an amount and clicking Continue generates the investment plan (PRD 11.3.4). Headline check is a KNOWN MISMATCH: the real screen currently shows the generic &#039;Your investment plan&#039; headline, not the PRD-mandated &#039;Your tax-saving plan&#039; - kept as-is intentionally to surface the gap, same as the CTA-label tests above." finished-at="2026-10-01T16:03:25 IST" duration-ms="12704" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[PRD requires 'Your tax-saving plan' as the headline for this journey expected [Your tax-saving plan] but found [Your investment plan]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: PRD requires 'Your tax-saving plan' as the headline for this journey expected [Your tax-saving plan] but found [Your investment plan]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.vro.rfc.tests.rfc.PortfolioPlannerTest.verifyTaxSavingPlanGeneration(PortfolioPlannerTest.java:415)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTaxSavingPlanGeneration -->
       </class> <!-- com.vro.rfc.tests.rfc.PortfolioPlannerTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- RFC Regression -->
+  </suite> <!-- RFC Test Suite -->
 </testng-results>

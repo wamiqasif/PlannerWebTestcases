@@ -5,8 +5,8 @@
     <classes>
       <class name="com.vro.rfc.tests.rfc.PortfolioPlannerTest">
         <methods>
+          <include name="verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount"/>
           <include name="suiteTearDown"/>
-          <include name="verifyInvestNowNavigatesToCart"/>
           <include name="openPortfolioPlanner"/>
           <include name="suiteSetup"/>
           <include name="recoverToDashboard"/>

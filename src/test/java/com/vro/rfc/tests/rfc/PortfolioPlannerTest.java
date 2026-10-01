@@ -458,6 +458,28 @@ public class PortfolioPlannerTest extends BaseTest {
 
         logStep("Test completed: verifyEditInvestmentPlanButtonOpensEditScreen");
     }
+    @Test(description = "Investment plan screen: 'Edit Investment Plan' opens the Edit Investment Plan screen "
+            + "(PRD: 'Upon clicking on the Edit button, users can edit the investment details')")
+    public void verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount() {
+        logStep("Test started: verifyEditInvestmentPlanButtonOpensEditScreen");
+
+        PortfolioPlannerPage plannerPage = generateHigherReturnsPlan();
+
+        logStep("Clicking 'Edit Investment Plan'");
+        plannerPage.clickEditInvestmentPlan();
+
+        plannerPage.waitUntilEditInvestmentPlanStepLoaded();
+        logStep("Edit Investment Plan screen loaded");
+        plannerPage.enterEditSIPAmount("20000");
+        logStep("enter rivised amount");
+        logStep("click on review changes");
+        logStep("click on confirmation");
+        plannerPage.clickPay();
+        logStep("click on review changes");
+        logStep("click on confirmation");
+
+        logStep("Test completed: verifyEditInvestment screen open & proceed to pay");
+    }
 
     @Test(description = "Investment plan screen: 'Invest Now' starts the cart order journey (PRD: 'An active "
             + "account initiates the cart order journey'). Uses the transaction-capable test investor - the "

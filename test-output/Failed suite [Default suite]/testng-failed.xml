@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [RFC Test Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.vro.rfc.listeners.TestListener"/>
-  </listeners>
-  <test thread-count="5" name="RFC Regression(failed)">
+<suite name="Failed suite [Failed suite [Default suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)(failed)">
     <classes>
-      <class name="com.vro.rfc.tests.rfc.RFC001_Test">
-        <methods>
-          <include name="verifyRFC001PortfolioNavigation"/>
-          <include name="suiteTearDown"/>
-          <include name="suiteSetup"/>
-          <include name="recoverToDashboard"/>
-        </methods>
-      </class> <!-- com.vro.rfc.tests.rfc.RFC001_Test -->
       <class name="com.vro.rfc.tests.rfc.PortfolioPlannerTest">
         <methods>
           <include name="verifyShowInvestmentPlanButtonLabel_MonthlyIncome"/>
           <include name="verifyMonthlyIncomePlanGeneration_StartIn1Year"/>
-          <include name="verifyTaxSavingPlanGeneration"/>
           <include name="verifyMonthlyIncomePlanGeneration_StartImmediately"/>
+          <include name="verifyTaxSavingPlanGeneration"/>
           <include name="verifyMonthlyIncomePlanGeneration_StartIn1To5Years"/>
           <include name="suiteTearDown"/>
-          <include name="verifyEditInvestmentPlanButtonOpensEditScreenChangeAmount"/>
-          <include name="suiteSetup"/>
           <include name="openPortfolioPlanner"/>
+          <include name="suiteSetup"/>
           <include name="verifyShowInvestmentPlanButtonLabel_TaxSaving"/>
           <include name="recoverToDashboard"/>
           <include name="loadTestData"/>
         </methods>
       </class> <!-- com.vro.rfc.tests.rfc.PortfolioPlannerTest -->
     </classes>
-  </test> <!-- RFC Regression(failed) -->
-</suite> <!-- Failed suite [RFC Test Suite] -->
+  </test> <!-- Default test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Default suite]] -->
